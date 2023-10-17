@@ -1,17 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function HeroSection() {
+export default function HeroSection({ headline }) {
 	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	const [heroText, setHeroText] = useState("Kenneth");
+	const [heroText, setHeroText] = useState(headline);
 	const iterationsRef = useRef(0);
 	const intervalIDRef = useRef(null);
 
-	const handleOnHover = () => {
-		// Reset the iteration count on hover
+	const startAnimation = () => {
 		iterationsRef.current = 0;
-		// Start the animation
 		intervalIDRef.current = setInterval(() => {
-			iterationsRef.current += 1 / 3; // Adjust the increment value to match your desired animation speed
+			iterationsRef.current += 1 / 3;
 			setHeroText((prevHeroText) =>
 				prevHeroText
 					.split("")
@@ -25,27 +23,32 @@ export default function HeroSection() {
 			);
 			if (iterationsRef.current >= heroText.length) {
 				clearInterval(intervalIDRef.current);
-				// Reset the text after the animation completes
-				setHeroText("Kenneth");
+				setHeroText(headline);
 			}
 		}, 30);
 	};
 
-	// Cleanup the interval on component unmount
 	useEffect(() => {
+		startAnimation();
 		return () => {
 			clearInterval(intervalIDRef.current);
 		};
 	}, []);
 
 	return (
+		//TODO when the screen is on mobile the header needs to be centered
 		<div
-			className="border d-flex justify-content-center align-items-center"
+			className="d-flex justify-content-center align-items-center"
 			style={{ height: "calc(100vh - 55px)" }}
 		>
 			<h1
-				onMouseEnter={handleOnHover}
-				style={{ fontSize: "5rem", fontFamily: "Space Mono, monospace" }}
+				onMouseEnter={startAnimation}
+				style={{
+					fontSize: "5rem",
+					fontFamily: "Space Mono, monospace",
+					marginBottom: "300px",
+					color: "var(--font-colour)",
+				}}
 			>
 				{heroText}
 			</h1>
