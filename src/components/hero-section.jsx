@@ -39,7 +39,7 @@ export default function HeroSection({ headline, description }) {
 		//TODO when the screen is on mobile the header needs to be centered
 		<div
 			className="d-flex flex-column justify-content-center align-items-center"
-			style={{ height: "calc(100vh - 55px)" }}
+			style={{ height: "100vh" }}
 		>
 			<h1
 				className=""

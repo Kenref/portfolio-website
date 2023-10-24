@@ -8,16 +8,21 @@ import AboutSection from "./components/About-me";
 export default function App() {
 	return (
 		<div style={{ backgroundColor: "var(--colour-background-primary)" }}>
-			<header className="container-xxl">
-				<NavBar className="navbar" />
-			</header>
-			<main className="container-xxl">
-				<HeroSection
-					headline={"Hello Hello Hello"}
-					description={"Software Developer"}
-				/>
-				<AboutSection headline="Tech stack" />
-			</main>
+			<div className="container-xxl px-5">
+				<header>
+					<NavBar className="navbar" />
+				</header>
+				<main>
+					<HeroSection
+						headline={"Hello Hello Hello"}
+						description={"Software Developer"}
+					/>
+					<AboutSection
+						headline="Skills"
+						body="Do proident elit minim ad ad. Excepteur dolor nostrud id voluptate ea et ut. Irure ad excepteur officia ipsum enim do consectetur. Nostrud ex do labore nostrud et nulla fugiat sunt adipisicing reprehenderit ipsum ea et reprehenderit dolor. Minim id cupidatat non sit. Quis tempor velit occaecat officia id aliquip voluptate id incididunt. Anim cupidatat qui ut duis nulla culpa commodo qui velit mollit."
+					/>
+				</main>
+			</div>
 		</div>
 	);
 }
