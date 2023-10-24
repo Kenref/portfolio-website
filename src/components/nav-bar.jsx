@@ -4,7 +4,9 @@ export default function NavBar() {
 	return (
 		<nav className="navbar navbar-expand-md" style={{ height: "55px" }}>
 			<a href="#" className="navbar-brand">
-				<span className="fw-bold text-secondary">Kenneth Tse</span>
+				<span className="fw-bold" style={{ color: "var(--colour-secondary)" }}>
+					Name logo here
+				</span>
 			</a>
 			{/* toggle button for mobile nav */}
 			<button
@@ -25,22 +27,38 @@ export default function NavBar() {
 			>
 				<ul className="navbar-nav">
 					<li className="nav-item">
-						<a className="nav-link" href="#">
+						<a
+							className="nav-link"
+							href="#"
+							style={{ color: "var(--colour-primary" }}
+						>
 							About
 						</a>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="#">
+						<a
+							className="nav-link"
+							href="#"
+							style={{ color: "var(--colour-primary" }}
+						>
 							Tech Stack
 						</a>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="#">
+						<a
+							className="nav-link"
+							href="#"
+							style={{ color: "var(--colour-primary" }}
+						>
 							Projects
 						</a>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="#">
+						<a
+							className="nav-link"
+							href="#"
+							style={{ color: "var(--colour-primary" }}
+						>
 							Contact
 						</a>
 					</li>

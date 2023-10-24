@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function HeroSection({ headline }) {
+export default function HeroSection({ headline, secondaryText }) {
 	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	const [heroText, setHeroText] = useState(headline);
 	const iterationsRef = useRef(0);
@@ -38,7 +38,7 @@ export default function HeroSection({ headline }) {
 	return (
 		//TODO when the screen is on mobile the header needs to be centered
 		<div
-			className="d-flex justify-content-center align-items-center"
+			className="d-flex justify-content-center align-items-center row"
 			style={{ height: "calc(100vh - 55px)" }}
 		>
 			<h1
@@ -47,11 +47,22 @@ export default function HeroSection({ headline }) {
 					fontSize: "5rem",
 					fontFamily: "Space Mono, monospace",
 					marginBottom: "300px",
-					color: "var(--font-colour)",
+					color: "var(--colour-attention)",
 				}}
 			>
 				{heroText}
 			</h1>
+			<h2
+				onMouseEnter={startAnimation}
+				style={{
+					// fontSize: "5rem",
+					fontFamily: "Space Mono, monospace",
+					marginBottom: "300px",
+					color: "var(--colour-secondary)",
+				}}
+			>
+				{secondaryText}
+			</h2>
 		</div>
 	);
 }

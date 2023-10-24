@@ -8,7 +8,10 @@ export default function App() {
 	return (
 		<header className="container-xxl">
 			<NavBar className="navbar"></NavBar>
-			<HeroSection headline={"Hello wassup"}></HeroSection>
+			<HeroSection
+				headline={"I am Kenneth"}
+				secondaryText={"Frontend Developer"}
+			></HeroSection>
 		</header>
 	);
 }

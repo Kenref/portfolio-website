@@ -1,6 +1,9 @@
 :root {
-	--background-colour: #08203e;
-	--font-colour: #557c93;
+	--background-colour: #f1faee;
+	--colour-attention: #e63946;
+	--colour-primary: #457b9d;
+	--colour-secondary: #a8dadc;
+	--colour-dark: #1d3557;
 }
 
 body {
