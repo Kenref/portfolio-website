@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function HeroSection({ headline, secondaryText }) {
+export default function HeroSection({ headline, description }) {
 	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	const [heroText, setHeroText] = useState(headline);
 	const iterationsRef = useRef(0);
@@ -38,31 +38,32 @@ export default function HeroSection({ headline, secondaryText }) {
 	return (
 		//TODO when the screen is on mobile the header needs to be centered
 		<div
-			className="d-flex justify-content-center align-items-center row"
+			className="d-flex flex-column justify-content-center align-items-center"
 			style={{ height: "calc(100vh - 55px)" }}
 		>
 			<h1
+				className=""
 				onMouseEnter={startAnimation}
 				style={{
 					fontSize: "5rem",
 					fontFamily: "Space Mono, monospace",
-					marginBottom: "300px",
-					color: "var(--colour-attention)",
+					color: "var(--colour-text-alert)",
 				}}
 			>
 				{heroText}
 			</h1>
 			<h2
-				onMouseEnter={startAnimation}
+				className=""
 				style={{
 					// fontSize: "5rem",
 					fontFamily: "Space Mono, monospace",
-					marginBottom: "300px",
-					color: "var(--colour-secondary)",
+					color: "var(--colour-text-light)",
 				}}
 			>
-				{secondaryText}
+				{description}
 			</h2>
 		</div>
 	);
 }
+
+//TODO add prop types

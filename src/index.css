@@ -1,11 +1,11 @@
 :root {
-	--background-colour: #f1faee;
-	--colour-attention: #e63946;
-	--colour-primary: #457b9d;
-	--colour-secondary: #a8dadc;
-	--colour-dark: #1d3557;
+	--colour-background-primary: #f1faee;
+	--colour-text-alert: #e63946;
+	--colour-text-light: #a8dadc;
+	--colour-text-normal: #457b9d;
+	--colour-text-dark: #1d3557;
 }
 
 body {
-	background-color: var(--background-colour);
+	/* background-color: var(--background-colour); */
 }

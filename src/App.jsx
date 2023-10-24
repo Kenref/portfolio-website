@@ -1,17 +1,23 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HeroSection from "./components/hero-section";
-import NavBar from "./components/nav-bar";
+import HeroSection from "./components/Hero-section";
+import NavBar from "./components/Nav-bar";
 import "./index.css";
+import AboutSection from "./components/About-me";
 
 export default function App() {
 	return (
-		<header className="container-xxl">
-			<NavBar className="navbar"></NavBar>
-			<HeroSection
-				headline={"I am Kenneth"}
-				secondaryText={"Frontend Developer"}
-			></HeroSection>
-		</header>
+		<div style={{ backgroundColor: "var(--colour-background-primary)" }}>
+			<header className="container-xxl">
+				<NavBar className="navbar" />
+			</header>
+			<main className="container-xxl">
+				<HeroSection
+					headline={"Hello Hello Hello"}
+					description={"Software Developer"}
+				/>
+				<AboutSection headline="Tech stack" />
+			</main>
+		</div>
 	);
 }
