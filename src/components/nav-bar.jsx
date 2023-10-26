@@ -2,8 +2,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default function NavBar() {
 	return (
-		//TODO make navbar scroll with the page
-		<nav className="navbar navbar-expand-md ">
+		//TODO make navbar scroll with the page or only appear when scrolling up
+		<nav className="navbar navbar-expand-md container">
 			<a href="#" className="navbar-brand">
 				<span className="fw-bold" style={{ color: "var(--colour-text-light)" }}>
 					Name logo here

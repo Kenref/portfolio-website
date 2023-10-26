@@ -8,7 +8,7 @@ import AboutSection from "./components/About-me";
 export default function App() {
 	return (
 		<div style={{ backgroundColor: "var(--colour-background-primary)" }}>
-			<div className="container-xxl px-5">
+			<div className="container">
 				<header>
 					<NavBar className="navbar" />
 				</header>
@@ -17,7 +17,7 @@ export default function App() {
 						headline={"I am Kenneth"}
 						description={"Software Developer"}
 					/>
-					<AboutSection />
+					<AboutSection className="row" />
 				</main>
 			</div>
 		</div>
