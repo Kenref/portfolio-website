@@ -4,6 +4,7 @@ import HeroSection from "./components/Hero-section";
 import NavBar from "./components/Nav-bar";
 import "./index.css";
 import AboutSection from "./components/About-me";
+import TechStack from "./components/Tech-stack";
 
 export default function App() {
 	return (
@@ -17,7 +18,8 @@ export default function App() {
 						headline={"I am Kenneth"}
 						description={"Software Developer"}
 					/>
-					<AboutSection className="row" />
+					<AboutSection />
+					<TechStack />
 				</main>
 			</div>
 		</div>
