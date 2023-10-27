@@ -35,17 +35,3 @@ export default function AboutSection({}) {
 		</div>
 	);
 }
-
-// 	<h2
-// 		className="text-decoration-underline my-4"
-// 		style={{ color: "var(--colour-text-dark)" }}
-// 	>
-// 		Interests
-// 	</h2>
-// 	<ul>
-// 		<li>PROGRAMMING</li>
-// 		<li>Reading</li>
-// 		<li>UFC</li>
-// 		<li>smoking meat</li>
-// 	</ul>
-// </div>;

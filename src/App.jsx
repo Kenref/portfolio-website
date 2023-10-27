@@ -5,6 +5,7 @@ import NavBar from "./components/Nav-bar";
 import "./index.css";
 import AboutSection from "./components/About-me";
 import TechStack from "./components/Tech-stack";
+import Interests from "./components/Interests";
 
 export default function App() {
 	return (
@@ -15,7 +16,7 @@ export default function App() {
 				</header>
 				<main>
 					<HeroSection
-						headline={"I am Kenneth"}
+						headline={"Kenneth Tse"}
 						description={"Software Developer"}
 					/>
 					<AboutSection />

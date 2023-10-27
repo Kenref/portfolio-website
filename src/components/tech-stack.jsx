@@ -9,6 +9,9 @@ export default function TechStack() {
 		},
 		{ src: "src/assets/React-Icon.png", alt: "React logo", title: "React" },
 		{ src: "src/assets/Nodejs-Icon.png", alt: "Node logo", title: "Node.js" },
+		{ src: "src/assets/Vite-Icon.png", alt: "Vite logo", title: "Vite" },
+		{ src: "src/assets/Jest-Icon.png", alt: "Jest logo", title: "Jest" },
+		{ src: "src/assets/Vitest-Icon.png", alt: "Vitest logo", title: "Vitest" },
 		{
 			src: "src/assets/Bootstrap-Icon.png",
 			alt: "Bootstrap logo",

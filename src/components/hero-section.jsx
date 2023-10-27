@@ -38,9 +38,10 @@ export default function HeroSection({ headline, description }) {
 	return (
 		//TODO when the screen is on mobile the header needs to be centered
 		//TODO add a arrow at the bottom of the screen to show that it is scrollable
+
 		<div
-			className="d-flex flex-column justify-content-center align-items-center"
-			style={{ height: "100vh" }}
+			className="d-flex flex-column pb-5 justify-content-center align-items-center"
+			style={{ minHeight: "100vh" }}
 		>
 			<h1
 				className=""
