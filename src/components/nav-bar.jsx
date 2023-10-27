@@ -33,34 +33,25 @@ export default function NavBar() {
 							href="#"
 							style={{ color: "var(--colour-text-dark" }}
 						>
-							About
-						</a>
-					</li>
-					<li className="nav-item">
-						<a
-							className="nav-link"
-							href="#"
-							style={{ color: "var(--colour-text-dark" }}
-						>
-							Tech Stack
-						</a>
-					</li>
-					<li className="nav-item">
-						<a
-							className="nav-link"
-							href="#"
-							style={{ color: "var(--colour-text-dark" }}
-						>
-							Projects
-						</a>
-					</li>
-					<li className="nav-item">
-						<a
-							className="nav-link"
-							href="#"
-							style={{ color: "var(--colour-text-dark" }}
-						>
 							Contact
+						</a>
+					</li>
+					<li className="nav-item">
+						<a
+							className="nav-link"
+							href="#"
+							style={{ color: "var(--colour-text-dark" }}
+						>
+							Resume
+						</a>
+					</li>
+					<li className="nav-item">
+						<a
+							className="nav-link"
+							href="#"
+							style={{ color: "var(--colour-text-dark" }}
+						>
+							Books
 						</a>
 					</li>
 				</ul>

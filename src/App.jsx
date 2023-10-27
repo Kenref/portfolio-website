@@ -5,7 +5,6 @@ import NavBar from "./components/Nav-bar";
 import "./index.css";
 import AboutSection from "./components/About-me";
 import TechStack from "./components/Tech-stack";
-import Interests from "./components/Interests";
 
 export default function App() {
 	return (

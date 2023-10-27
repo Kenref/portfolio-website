@@ -29,17 +29,14 @@ export default function TechStack() {
 		},
 	];
 	return (
-		<div className="col-lg-8 mx-auto">
-			<div className="text-center" style={{ minHeight: "100vh" }}>
-				<h2
-					className="text-decoration-underline mb-4"
-					style={{ color: "var(--colour-text-alert)" }}
-				>
-					Skills
-				</h2>
-				<div className="col-lg-8 row gap-md-3 justify-content-center mx-auto">
+		<div className="row justify-content-center">
+			<h2 className="col-2" style={{ color: "var(--colour-text-light)" }}>
+				Skills
+			</h2>
+			<div className="col-lg-4" style={{ minHeight: "100vh" }}>
+				<div className=" row text-center justify-content-center">
 					{skills.map((skill, index) => (
-						<div className="col-4 col-md-3" key={index}>
+						<div className="col-4" key={index}>
 							<img className="img-fluid" src={skill.src} alt={skill.alt} />
 							<h5 style={{ color: "var(--colour-text-dark)" }}>
 								{skill.title}
