@@ -3,8 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import HeroSection from "./components/Hero-section";
 import NavBar from "./components/Nav-bar";
 import "./index.css";
-import AboutSection from "./components/About-me";
+import AboutSection from "./components/About";
 import TechStack from "./components/Tech-stack";
+import Projects from "./components/Projects";
 
 export default function App() {
 	return (
@@ -20,6 +21,7 @@ export default function App() {
 					/>
 					<AboutSection />
 					<TechStack />
+					<Projects></Projects>
 				</main>
 			</div>
 		</div>

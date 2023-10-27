@@ -45,7 +45,7 @@ export default function NavBar() {
 							Resume
 						</a>
 					</li>
-					<li className="nav-item">
+					{/* <li className="nav-item">
 						<a
 							className="nav-link"
 							href="#"
@@ -53,7 +53,7 @@ export default function NavBar() {
 						>
 							Books
 						</a>
-					</li>
+					</li> */}
 				</ul>
 			</div>
 		</nav>
