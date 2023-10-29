@@ -33,7 +33,7 @@ export default function NavBar() {
 							href="#"
 							style={{ color: "var(--colour-text-dark" }}
 						>
-							Contact
+							Resume
 						</a>
 					</li>
 					<li className="nav-item">
@@ -42,7 +42,7 @@ export default function NavBar() {
 							href="#"
 							style={{ color: "var(--colour-text-dark" }}
 						>
-							Resume
+							Contact
 						</a>
 					</li>
 					{/* <li className="nav-item">

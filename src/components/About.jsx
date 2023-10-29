@@ -1,4 +1,5 @@
 export default function AboutSection() {
+	const darkFont = { color: "var(--colour-text-normal)" };
 	return (
 		//about me
 		<div
@@ -14,22 +15,27 @@ export default function AboutSection() {
 			>
 				{/* TODO potentially make the hand wave */}
 				<p>
-					In 2022, I made the life changing decision to pursue the life of a
-					developer by leaving my old career behind to pursue programming full
-					time. Prior to this I was a digital marketer who specialised on
-					platforms such as Amazon and working with SEO, so user experience and
-					customer behaviours are nothing new to me.
+					I am a <span style={darkFont}>software developer</span> who began
+					their journey into the world of code in 2022. Prior to this I
+					graduated with a{" "}
+					<span style={darkFont}>
+						Bachelors of Business at Macquarie University
+					</span>
+					. I was also a <span style={darkFont}>digital marketer</span> on
+					platforms such as <span style={darkFont}>Amazon</span>, specialising
+					in ad campaign creation and management, understanding customer
+					behaviour and SEO.
 				</p>
 				<p>
-					Nowadays my love for code has taken over as I have really come to
-					enjoy the constant sense of achievement that I feel as I continue to
-					level up my skills. To me the ethos of lifelong learning is not just
-					another career path but unlocks a new way to live which can also be
-					applied to other areas of my life.
+					Nowadays my love for programming has taken over as I enjoy the
+					constant sense of achievement I feel in leveling up my skills.
+					Discovering new concepts such as test driven development and SOLID
+					really makes writing code feel like an artform as each will transform
+					the way I write and think about code.
 				</p>
 				<p>
-					When I am not in fronnt of a computer I enjoy smoking meats, solving
-					puzzles and reading (highly recommend Atomic Habits by James Clear)
+					When I am not in front of a computer I enjoy BBQ, solving puzzles and
+					reading (highly recommend Atomic Habits by James Clear)
 				</p>
 			</div>
 		</div>
