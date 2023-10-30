@@ -15,16 +15,16 @@ export default function AboutSection() {
 			>
 				{/* TODO potentially make the hand wave */}
 				<p>
-					I am a <span style={darkFont}>software developer</span> who began
-					their journey into the world of code in 2022. Prior to this I
-					graduated with a{" "}
-					<span style={darkFont}>
+					I am a <strong style={darkFont}>software developer</strong> who began
+					my journey into the world of code in 2022. Prior to this I graduated
+					with a{" "}
+					<strong style={darkFont}>
 						Bachelors of Business at Macquarie University
-					</span>
-					. I was also a <span style={darkFont}>digital marketer</span> on
-					platforms such as <span style={darkFont}>Amazon</span>, specialising
-					in ad campaign creation and management, understanding customer
-					behaviour and SEO.
+					</strong>
+					. I was also a <strong style={darkFont}>digital marketer</strong> on
+					platforms such as <strong style={darkFont}>Amazon</strong>,
+					specialising in ad campaign creation and management, understanding
+					customer behaviour and SEO.
 				</p>
 				<p>
 					Nowadays my love for programming has taken over as I enjoy the
@@ -34,7 +34,7 @@ export default function AboutSection() {
 					the way I write and think about code.
 				</p>
 				<p>
-					When I am not in front of a computer I enjoy BBQ, solving puzzles and
+					When I am not in front of a computer I enjoy BBQ, playing chess and
 					reading (highly recommend Atomic Habits by James Clear)
 				</p>
 			</div>

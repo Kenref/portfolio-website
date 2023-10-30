@@ -5,15 +5,16 @@ export default function Projects() {
 			src: "src/assets/memory-mockup.png",
 			alt: "Memory Card Game mockup",
 			description:
-				"Ad ad aute nisi et ad deserunt sit laboris esse occaecat aliqua labore enim.",
-			skills: "Html, CSS, JS, React, Bootstrap",
+				"Memory card game built with the RESTful Poke API. Objective is to click on all unique cards until all have been selected. Able to select from 4 diificulties and play with different cards each time",
+			skills: ["HTML", "CSS", "JS", "React", "Bootstrap"],
 		},
 		{
 			title: "Calculator",
 			src: "src/assets/calculator-mockup.png",
 			alt: "Calculator",
-			description: "Cillum ullamco excepteur anim cupidatat ipsum nulla.",
-			skills: "HTML, CSS, JS",
+			description:
+				"A working calculator built using plain Javascript with keyboard functionality and the ability to do consecutive calculations.",
+			skills: ["HTML", "CSS", "JS"],
 		},
 	];
 	return (
@@ -35,14 +36,22 @@ export default function Projects() {
 						<h3 style={{ color: "var(--colour-text-dark)" }}>
 							{project.title}
 						</h3>
+
+						<div>
+							{project.skills.map((skill, index) => (
+								<span className="badge mx-2 text-bg-primary" key={index}>
+									{skill}
+								</span>
+							))}
+						</div>
+
 						<img
 							className="w-100"
-							style={{ marginTop: "-3rem", marginBottom: "-2rem" }}
+							style={{ marginTop: "-2rem", marginBottom: "-2rem" }}
 							src={project.src}
 							alt={project.alt}
 						/>
-						<p>{project.description}</p>
-						<p>{project.skills}</p>
+						<p className="col-8 mx-auto">{project.description}</p>
 					</div>
 				))}
 			</div>
