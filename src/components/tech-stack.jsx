@@ -1,4 +1,6 @@
-export default function TechStack() {
+import { forwardRef } from "react";
+
+const TechStack = forwardRef((props, ref) => {
 	const skills = [
 		{ src: "src/assets/HTML-Icon.png", alt: "HTML logo", title: "HTML" },
 		{ src: "src/assets/CSS-Icon.png", alt: "CSS logo", title: "CSS" },
@@ -29,14 +31,20 @@ export default function TechStack() {
 		},
 	];
 	return (
-		<div className="row justify-content-center">
-			<h2 className="col-2" style={{ color: "var(--colour-text-light)" }}>
+		<div
+			className="row justify-content-center custom-scroll-animation-hidden"
+			ref={ref}
+		>
+			<h2
+				className="col-2 text-center mb-4"
+				style={{ color: "var(--colour-text-light)" }}
+			>
 				Skills
 			</h2>
-			<div className="col-lg-4" style={{ minHeight: "100vh" }}>
-				<div className=" row text-center justify-content-center">
+			<div className="col-lg-6" style={{ minHeight: "100vh" }}>
+				<div className=" row text-center">
 					{skills.map((skill, index) => (
-						<div className="col-4" key={index}>
+						<div className="col-3" key={index}>
 							<img className="img-fluid" src={skill.src} alt={skill.alt} />
 							<h5 style={{ color: "var(--colour-text-dark)" }}>
 								{skill.title}
@@ -47,4 +55,7 @@ export default function TechStack() {
 			</div>
 		</div>
 	);
-}
+});
+
+TechStack.displayName = "TechStack";
+export default TechStack;
