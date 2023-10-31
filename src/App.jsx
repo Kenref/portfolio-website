@@ -10,15 +10,23 @@ import Projects from "./components/Projects";
 export default function App() {
 	const aboutRef = useRef(null);
 	const techStackRef = useRef(null);
+	// const projectsRefs = useRef([]);
+	function useArrayOfRefs(length) {
+		const refsArray = Array.from({ length }, () => useRef(null));
+		return refsArray;
+	}
+
+	const projectsRefs = useArrayOfRefs(2);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					entry.target.classList.add("custom-scroll-animation-show");
-				} else {
-					entry.target.classList.remove("custom-scroll-animation-show");
 				}
+				// else {
+				// 	entry.target.classList.remove("custom-scroll-animation-show");
+				// }
 			});
 		});
 
@@ -28,8 +36,12 @@ export default function App() {
 		if (techStackRef.current) {
 			observer.observe(techStackRef.current);
 		}
+		projectsRefs.forEach((projectRef) => {
+			if (projectRef.current) {
+				observer.observe(projectRef.current);
+			}
+		});
 
-		// Cleanup observer on component unmount
 		return () => {
 			if (aboutRef.current) {
 				observer.unobserve(aboutRef.current);
@@ -37,8 +49,13 @@ export default function App() {
 			if (techStackRef.current) {
 				observer.unobserve(techStackRef.current);
 			}
+			projectsRefs.forEach((projectRef) => {
+				if (projectRef.current) {
+					observer.observe(projectRef.current);
+				}
+			});
 		};
-	}, [aboutRef.current]);
+	}, []);
 
 	return (
 		<div style={{ backgroundColor: "var(--colour-background-primary)" }}>
@@ -53,7 +70,7 @@ export default function App() {
 					/>
 					<AboutSection ref={aboutRef} />
 					<TechStack ref={techStackRef} />
-					<Projects></Projects>
+					<Projects ref={projectsRefs} />
 				</main>
 			</div>
 		</div>

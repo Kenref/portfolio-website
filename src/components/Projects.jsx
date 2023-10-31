@@ -1,4 +1,6 @@
-export default function Projects() {
+import { createRef, forwardRef, useImperativeHandle, useRef } from "react";
+
+const Projects = forwardRef((props, ref) => {
 	const projects = [
 		{
 			title: "Memory Card Game",
@@ -17,6 +19,7 @@ export default function Projects() {
 			skills: ["HTML", "CSS", "JS"],
 		},
 	];
+
 	return (
 		<div className="row justify-content-center" style={{ minHeight: "100vh" }}>
 			<h1
@@ -29,9 +32,10 @@ export default function Projects() {
 			<div className="row col-lg-8">
 				{projects.map((project, index) => (
 					<div
-						className="text-center"
+						className="text-center custom-scroll-animation-hidden"
 						style={{ minHeight: "100vh" }}
 						key={index}
+						ref={ref[index]}
 					>
 						<h3 style={{ color: "var(--colour-text-dark)" }}>
 							{project.title}
@@ -57,4 +61,7 @@ export default function Projects() {
 			</div>
 		</div>
 	);
-}
+});
+
+Projects.displayName = "Projects";
+export default Projects;

@@ -42,7 +42,7 @@ const TechStack = forwardRef((props, ref) => {
 				Skills
 			</h2>
 			<div className="col-lg-6" style={{ minHeight: "100vh" }}>
-				<div className=" row text-center">
+				<div className=" row text-center justify-content-center">
 					{skills.map((skill, index) => (
 						<div className="col-3" key={index}>
 							<img className="img-fluid" src={skill.src} alt={skill.alt} />
