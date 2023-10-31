@@ -3,7 +3,6 @@ import { forwardRef } from "react";
 const AboutSection = forwardRef((props, ref) => {
 	const darkFont = { color: "var(--colour-text-normal)" };
 	return (
-		//about me
 		<div
 			className="row justify-content-center gap-3 custom-scroll-animation-hidden"
 			ref={ref}
@@ -15,7 +14,6 @@ const AboutSection = forwardRef((props, ref) => {
 				className="col-lg-5"
 				style={{ color: "var(--colour-text-dark)", minHeight: "50em" }}
 			>
-				{/* TODO potentially make the hand wave */}
 				<p>
 					I am a <strong style={darkFont}>software developer</strong> who began
 					my journey into the world of code in 2022. Prior to this I graduated

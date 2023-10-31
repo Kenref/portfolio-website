@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HeroSection from "./components/Hero-section";
 import NavBar from "./components/Nav-bar";
@@ -10,7 +10,6 @@ import Projects from "./components/Projects";
 export default function App() {
 	const aboutRef = useRef(null);
 	const techStackRef = useRef(null);
-	// const projectsRefs = useRef([]);
 	function useArrayOfRefs(length) {
 		const refsArray = Array.from({ length }, () => useRef(null));
 		return refsArray;

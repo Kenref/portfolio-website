@@ -1,4 +1,4 @@
-import { createRef, forwardRef, useImperativeHandle, useRef } from "react";
+import { forwardRef } from "react";
 
 const Projects = forwardRef((props, ref) => {
 	const projects = [
