@@ -7,11 +7,14 @@ const AboutSection = forwardRef((props, ref) => {
 			className="row justify-content-center gap-3 custom-scroll-animation-hidden"
 			ref={ref}
 		>
-			<h3 className="col-2" style={{ color: "var(--colour-text-light)" }}>
+			<h3
+				className="col-2 text-center"
+				style={{ color: "var(--colour-text-light)" }}
+			>
 				About
 			</h3>
 			<div
-				className="col-lg-5"
+				className="col-lg-6"
 				style={{ color: "var(--colour-text-dark)", minHeight: "50em" }}
 			>
 				<p>
@@ -34,8 +37,9 @@ const AboutSection = forwardRef((props, ref) => {
 					the way I write and think about code.
 				</p>
 				<p>
-					When I am not in front of a computer I enjoy BBQ, playing chess and
-					reading (highly recommend Atomic Habits by James Clear)
+					<strong style={darkFont}>When I am not in front of a computer</strong>{" "}
+					I enjoy BBQ, playing chess and reading (highly recommend Atomic Habits
+					by James Clear)
 				</p>
 			</div>
 		</div>

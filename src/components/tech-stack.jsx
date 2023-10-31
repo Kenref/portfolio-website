@@ -36,7 +36,7 @@ const TechStack = forwardRef((props, ref) => {
 			ref={ref}
 		>
 			<h2
-				className="col-2 text-center mb-4"
+				className="col-2 text-center"
 				style={{ color: "var(--colour-text-light)" }}
 			>
 				Skills

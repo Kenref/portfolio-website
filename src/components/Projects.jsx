@@ -26,12 +26,12 @@ const Projects = forwardRef((props, ref) => {
 
 	return (
 		<div className="row justify-content-center" style={{ minHeight: "100vh" }}>
-			<h1
-				className="col-lg-4 text-center text-lg-end"
+			<h3
+				className="col-lg-3 text-center text-lg-end"
 				style={{ color: "var(--colour-text-light)" }}
 			>
 				Projects
-			</h1>
+			</h3>
 			{/* TODO add links to project demo and code */}
 			<div className="row col-lg-8">
 				{projects.map((project, index) => (
