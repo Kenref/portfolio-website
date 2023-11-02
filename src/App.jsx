@@ -6,6 +6,7 @@ import "./index.css";
 import AboutSection from "./components/About";
 import TechStack from "./components/Tech-stack";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 export default function App() {
 	const aboutRef = useRef(null);
@@ -70,8 +71,12 @@ export default function App() {
 					<AboutSection ref={aboutRef} />
 					<TechStack ref={techStackRef} />
 					<Projects ref={projectsRefs} />
+					<Contact />
 				</main>
 			</div>
 		</div>
 	);
 }
+
+//TODO add a arrow at the bottom of each page to show its scollable
+//TODO move states into here

@@ -1,6 +1,6 @@
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-export default function NavBar() {
+const NavBar = () => {
 	return (
 		//TODO make navbar scroll with the page or only appear when scrolling up
 		<nav className="navbar navbar-expand-md container">
@@ -58,4 +58,5 @@ export default function NavBar() {
 			</div>
 		</nav>
 	);
-}
+};
+export default NavBar;
