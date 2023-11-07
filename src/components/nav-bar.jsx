@@ -1,6 +1,8 @@
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const NavBar = () => {
+	const resume = "public/Kenneth Tse Resume.pdf";
+	const contact = "";
 	return (
 		//TODO make navbar scroll with the page or only appear when scrolling up
 		<nav className="navbar navbar-expand-md container">
@@ -30,7 +32,7 @@ const NavBar = () => {
 					<li className="nav-item">
 						<a
 							className="nav-link"
-							href="#"
+							href={resume}
 							style={{ color: "var(--colour-text-dark" }}
 						>
 							Resume
@@ -39,7 +41,7 @@ const NavBar = () => {
 					<li className="nav-item">
 						<a
 							className="nav-link"
-							href="#"
+							href={contact}
 							style={{ color: "var(--colour-text-dark" }}
 						>
 							Contact
