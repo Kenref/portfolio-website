@@ -2,7 +2,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const NavBar = () => {
 	const resume = "public/Kenneth Tse Resume.pdf";
-	const contact = "";
+	const contact = "/contact/#email";
 	return (
 		//TODO make navbar scroll with the page or only appear when scrolling up
 		<nav className="navbar navbar-expand-md container">

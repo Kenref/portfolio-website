@@ -9,6 +9,7 @@ const Contact = () => {
 				Contact
 			</h2>
 			<h2
+				id="email"
 				className="col-lg-6 text-center"
 				style={{ color: "var(--colour-text-dark)" }}
 			>
