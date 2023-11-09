@@ -9,6 +9,8 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 export default function App() {
+	const headline1 = "Kenneth Tse";
+	const headline2 = "Software Developer";
 	const aboutRef = useRef(null);
 	const techStackRef = useRef(null);
 	function useArrayOfRefs(length) {
@@ -24,9 +26,6 @@ export default function App() {
 				if (entry.isIntersecting) {
 					entry.target.classList.add("custom-scroll-animation-show");
 				}
-				// else {
-				// 	entry.target.classList.remove("custom-scroll-animation-show");
-				// }
 			});
 		});
 
@@ -64,10 +63,7 @@ export default function App() {
 					<NavBar className="navbar" />
 				</header>
 				<main>
-					<HeroSection
-						headline={"Kenneth Tse"}
-						description={"Software Developer"}
-					/>
+					<HeroSection headline={headline1} description={headline2} />
 					<AboutSection ref={aboutRef} />
 					<TechStack ref={techStackRef} />
 					<Projects ref={projectsRefs} />
@@ -77,6 +73,3 @@ export default function App() {
 		</div>
 	);
 }
-
-//TODO add a arrow at the bottom of each page to show its scollable
-//TODO move states into here

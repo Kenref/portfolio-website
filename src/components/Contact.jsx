@@ -21,5 +21,4 @@ const Contact = () => {
 		</div>
 	);
 };
-//TODO add a go back to top button
 export default Contact;

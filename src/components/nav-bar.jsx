@@ -4,8 +4,7 @@ const NavBar = () => {
 	const resume = "public/Kenneth Tse Resume.pdf";
 	const contact = "#email";
 	return (
-		//TODO make navbar scroll with the page or only appear when scrolling up
-		<nav className="navbar navbar-expand-md container">
+		<nav className="navbar navbar-expand-md container justify-content-end">
 			{/* toggle button for mobile nav */}
 			<button
 				className="navbar-toggler"
