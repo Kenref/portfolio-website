@@ -19,8 +19,8 @@ const AboutSection = forwardRef((props, ref) => {
 			>
 				<p>
 					I am a <strong style={darkFont}>software developer</strong> who began
-					my journey into the world of code in 2022. Prior to this I graduated
-					with a{" "}
+					my journey into the world of code in early 2022. Prior to this I
+					graduated with a{" "}
 					<strong style={darkFont}>
 						Bachelors of Business at Macquarie University
 					</strong>
@@ -32,14 +32,13 @@ const AboutSection = forwardRef((props, ref) => {
 				<p>
 					Nowadays my love for programming has taken over as I enjoy the
 					constant sense of achievement I feel in leveling up my skills.
-					Discovering new concepts such as test driven development and SOLID
-					really makes writing code feel like an artform as each will transform
-					the way I write and think about code.
+					Discovering new design philosophies such as test driven development
+					and SOLID really makes writing code feel like an artform as each will
+					transform the way I write and think about code.
 				</p>
 				<p>
 					<strong style={darkFont}>When I am not in front of a computer</strong>{" "}
-					I enjoy BBQ, playing chess and reading (highly recommend Atomic Habits
-					by James Clear)
+					I enjoy BBQ, playing chess and reading.
 				</p>
 			</div>
 		</div>
