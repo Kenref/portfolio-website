@@ -1,14 +1,16 @@
 import { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HeroSection from "./components/Hero-section";
-import NavBar from "./components/Nav-bar";
+import HeroSection from "./components/HeroSection";
+import NavBar from "./components/NavBar";
 import "./index.css";
 import AboutSection from "./components/About";
-import TechStack from "./components/Tech-stack";
+import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 export default function App() {
+	const resume = "public/Kenneth Tse Resume.pdf";
+	const contact = "#email";
 	const headline1 = "Kenneth Tse";
 	const headline2 = "Software Developer";
 	const darkFont = { color: "var(--colour-text-normal)" };
@@ -37,7 +39,7 @@ export default function App() {
 			enjoy BBQ, playing chess and reading.
 		</>,
 	];
-
+	const email = "kenneth.tseee@gmail.com";
 	const aboutRef = useRef(null);
 	const techStackRef = useRef(null);
 	function useArrayOfRefs(length) {
@@ -86,14 +88,14 @@ export default function App() {
 		<div style={{ backgroundColor: "var(--colour-background-primary)" }}>
 			<div className="container">
 				<header>
-					<NavBar className="navbar" />
+					<NavBar className="navbar" resume={resume} contact={contact} />
 				</header>
 				<main>
-					<HeroSection headline={headline1} description={headline2} />
+					<HeroSection headline1={headline1} headline2={headline2} />
 					<AboutSection ref={aboutRef} aboutContent={aboutContent} />
 					<TechStack ref={techStackRef} />
 					<Projects ref={projectsRefs} />
-					<Contact />
+					<Contact email={email} />
 				</main>
 			</div>
 		</div>

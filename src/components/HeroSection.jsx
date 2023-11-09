@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import { PropTypes } from "prop-types";
 
-export default function HeroSection({ headline, description }) {
+export default function HeroSection({ headline1, headline2 }) {
 	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	const [heroText, setHeroText] = useState(headline);
+	const [heroText, setHeroText] = useState(headline1);
 	const iterationsRef = useRef(0);
 	const intervalIDRef = useRef(null);
 
@@ -23,7 +24,7 @@ export default function HeroSection({ headline, description }) {
 			);
 			if (iterationsRef.current >= heroText.length) {
 				clearInterval(intervalIDRef.current);
-				setHeroText(headline);
+				setHeroText(headline1);
 			}
 		}, 30);
 	};
@@ -44,7 +45,6 @@ export default function HeroSection({ headline, description }) {
 			style={{ minHeight: "100vh" }}
 		>
 			<h1
-				className=""
 				onMouseEnter={startAnimation}
 				style={{
 					fontSize: "5rem",
@@ -55,17 +55,18 @@ export default function HeroSection({ headline, description }) {
 				{heroText}
 			</h1>
 			<h2
-				className=""
 				style={{
-					// fontSize: "5rem",
 					fontFamily: "Space Mono, monospace",
 					color: "var(--colour-text-light)",
 				}}
 			>
-				{description}
+				{headline2}
 			</h2>
 		</div>
 	);
 }
 
-//TODO add prop types
+HeroSection.propTypes = {
+	headline1: PropTypes.string,
+	headline2: PropTypes.string,
+};

@@ -1,5 +1,6 @@
-const Contact = () => {
-	const email = "kenneth.tseee@gmail.com";
+import { PropTypes } from "prop-types";
+
+const Contact = ({ email }) => {
 	return (
 		<div
 			id="email"
@@ -16,9 +17,13 @@ const Contact = () => {
 				className="col-lg-6 text-center"
 				style={{ color: "var(--colour-text-dark)" }}
 			>
-				👉 <a href="mailto:kenneth.tseee@gmail.com">{email}</a> 👈
+				👉 <a href={`mailto:${email}`}>{email}</a> 👈
 			</h2>
 		</div>
 	);
+};
+
+Contact.propTypes = {
+	email: PropTypes.string,
 };
 export default Contact;

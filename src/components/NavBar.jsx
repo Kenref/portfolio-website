@@ -1,8 +1,7 @@
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { PropTypes } from "prop-types";
 
-const NavBar = () => {
-	const resume = "public/Kenneth Tse Resume.pdf";
-	const contact = "#email";
+const NavBar = ({ resume, contact }) => {
 	return (
 		<nav className="navbar navbar-expand-md container justify-content-end">
 			{/* toggle button for mobile nav */}
@@ -48,4 +47,10 @@ const NavBar = () => {
 		</nav>
 	);
 };
+
+NavBar.propTypes = {
+	resume: PropTypes.string,
+	contact: PropTypes.string,
+};
+
 export default NavBar;
