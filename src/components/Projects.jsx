@@ -1,29 +1,7 @@
 import { forwardRef } from "react";
+import { PropTypes } from "prop-types";
 
-const Projects = forwardRef((props, ref) => {
-	const projects = [
-		{
-			title: "Memory Card Game",
-			src: "/src/assets/memory-mockup.png",
-			alt: "Memory Card Game mockup",
-			description:
-				"Memory card game built with the RESTful Poke API. Objective is to click on all unique cards until all have been selected. Able to select from 4 diificulties and play with different cards each time",
-			skills: ["HTML", "CSS", "JS", "React", "Bootstrap"],
-			github: "https://github.com/Kenref/memory-card-game",
-			demo: "https://kenneth-memory-card-game.netlify.app/",
-		},
-		{
-			title: "Calculator",
-			src: "/src/assets/calculator-mockup.png",
-			alt: "Calculator",
-			description:
-				"A working calculator built using plain Javascript with keyboard functionality and the ability to do consecutive calculations.",
-			skills: ["HTML", "CSS", "JS"],
-			github: "https://github.com/Kenref/calculator",
-			demo: "https://kenref.github.io/calculator/",
-		},
-	];
-
+const Projects = forwardRef(({ projects }, ref) => {
 	return (
 		<div className="row justify-content-center" style={{ minHeight: "100vh" }}>
 			<h3
@@ -103,5 +81,6 @@ const Projects = forwardRef((props, ref) => {
 	);
 });
 
+Projects.propTypes = { projects: PropTypes.array };
 Projects.displayName = "Projects";
 export default Projects;

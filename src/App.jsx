@@ -78,6 +78,29 @@ export default function App() {
 		},
 	];
 
+	const projects = [
+		{
+			title: "Memory Card Game",
+			src: "/src/assets/memory-mockup.png",
+			alt: "Memory Card Game mockup",
+			description:
+				"Memory card game built with the RESTful Poke API. Objective is to click on all unique cards until all have been selected. Able to select from 4 diificulties and play with different cards each time",
+			skills: ["HTML", "CSS", "JS", "React", "Bootstrap"],
+			github: "https://github.com/Kenref/memory-card-game",
+			demo: "https://kenneth-memory-card-game.netlify.app/",
+		},
+		{
+			title: "Calculator",
+			src: "/src/assets/calculator-mockup.png",
+			alt: "Calculator",
+			description:
+				"A working calculator built using plain Javascript with keyboard functionality and the ability to do consecutive calculations.",
+			skills: ["HTML", "CSS", "JS"],
+			github: "https://github.com/Kenref/calculator",
+			demo: "https://kenref.github.io/calculator/",
+		},
+	];
+
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
@@ -130,7 +153,7 @@ export default function App() {
 					<HeroSection headline1={headline1} headline2={headline2} />
 					<AboutSection ref={aboutRef} aboutContent={aboutContent} />
 					<TechStack skills={skills} ref={techStackRef} />
-					<Projects ref={projectsRefs} />
+					<Projects projects={projects} ref={projectsRefs} />
 					<Contact email={email} ref={contactRef} />
 				</main>
 			</div>
