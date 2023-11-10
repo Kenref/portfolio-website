@@ -1,46 +1,18 @@
 import { forwardRef } from "react";
+import { PropTypes } from "prop-types";
 
-const TechStack = forwardRef((props, ref) => {
-	const skills = [
-		{ src: "/src/assets/HTML-Icon.png", alt: "HTML logo", title: "HTML" },
-		{ src: "/src/assets/CSS-Icon.png", alt: "CSS logo", title: "CSS" },
-		{
-			src: "/src/assets/JS-Icon.png",
-			alt: "JavaScript logo",
-			title: "JavaScript",
-		},
-		{ src: "/src/assets/React-Icon.png", alt: "React logo", title: "React" },
-		{ src: "/src/assets/Nodejs-Icon.png", alt: "Node logo", title: "Node.js" },
-		{ src: "/src/assets/Vite-Icon.png", alt: "Vite logo", title: "Vite" },
-		{ src: "/src/assets/Jest-Icon.png", alt: "Jest logo", title: "Jest" },
-		{ src: "/src/assets/Vitest-Icon.png", alt: "Vitest logo", title: "Vitest" },
-		{
-			src: "/src/assets/Bootstrap-Icon.png",
-			alt: "Bootstrap logo",
-			title: "Bootstrap",
-		},
-		{
-			src: "/src/assets/Python-Icon.png",
-			alt: "Python logo",
-			title: "Python",
-		},
-		{
-			src: "/src/assets/Github-Icon.png",
-			alt: "Github logo",
-			title: "Github",
-		},
-	];
+const TechStack = forwardRef(({ skills }, ref) => {
 	return (
 		<div className="row justify-content-center">
 			<h2
-				className="col-2 text-center"
+				className="col-md-4 col-lg-2 text-center"
 				style={{ color: "var(--colour-text-light)" }}
 			>
 				Skills
 			</h2>
 			<div
 				ref={ref}
-				className="col-lg-6 custom-scroll-animation-hidden"
+				className="col-md-9 col-lg-6 custom-scroll-animation-hidden"
 				style={{ minHeight: "100vh" }}
 			>
 				<div className=" row text-center justify-content-center">
@@ -58,5 +30,6 @@ const TechStack = forwardRef((props, ref) => {
 	);
 });
 
+TechStack.propTypes = { skills: PropTypes.array };
 TechStack.displayName = "TechStack";
 export default TechStack;
