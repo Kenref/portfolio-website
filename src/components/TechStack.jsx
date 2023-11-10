@@ -31,17 +31,18 @@ const TechStack = forwardRef((props, ref) => {
 		},
 	];
 	return (
-		<div
-			className="row justify-content-center custom-scroll-animation-hidden"
-			ref={ref}
-		>
+		<div className="row justify-content-center">
 			<h2
 				className="col-2 text-center"
 				style={{ color: "var(--colour-text-light)" }}
 			>
 				Skills
 			</h2>
-			<div className="col-lg-6" style={{ minHeight: "100vh" }}>
+			<div
+				ref={ref}
+				className="col-lg-6 custom-scroll-animation-hidden"
+				style={{ minHeight: "100vh" }}
+			>
 				<div className=" row text-center justify-content-center">
 					{skills.map((skill, index) => (
 						<div className="col-3" key={index}>

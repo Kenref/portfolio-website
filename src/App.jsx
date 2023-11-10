@@ -47,6 +47,7 @@ export default function App() {
 		return refsArray;
 	}
 	const projectsRefs = useArrayOfRefs(2);
+	const contactRef = useRef(null);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver((entries) => {
@@ -68,6 +69,9 @@ export default function App() {
 				observer.observe(projectRef.current);
 			}
 		});
+		if (contactRef.current) {
+			observer.observe(contactRef.current);
+		}
 
 		return () => {
 			if (aboutRef.current) {
@@ -81,6 +85,9 @@ export default function App() {
 					observer.observe(projectRef.current);
 				}
 			});
+			if (contactRef.current) {
+				observer.unobserve(contactRef.current);
+			}
 		};
 	}, []);
 
@@ -95,7 +102,7 @@ export default function App() {
 					<AboutSection ref={aboutRef} aboutContent={aboutContent} />
 					<TechStack ref={techStackRef} />
 					<Projects ref={projectsRefs} />
-					<Contact email={email} />
+					<Contact email={email} ref={contactRef} />
 				</main>
 			</div>
 		</div>
