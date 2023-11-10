@@ -37,18 +37,16 @@ export default function HeroSection({ headline1, headline2 }) {
 	}, []);
 
 	return (
-		//TODO when the screen is on mobile the header needs to be centered
-
 		<div
 			className="d-flex flex-column pb-5 justify-content-center align-items-center"
 			style={{ minHeight: "100vh" }}
 		>
 			<h1
 				onMouseEnter={startAnimation}
-				//TODO change font size to be smaller on smaller screens
 				className="text-center"
 				style={{
-					fontSize: "5rem",
+					// fontSize: "5rem",
+					fontSize: "calc(1rem + 8vmin)",
 					fontFamily: "Space Mono, monospace",
 					color: "var(--colour-text-alert)",
 				}}
@@ -56,6 +54,7 @@ export default function HeroSection({ headline1, headline2 }) {
 				{heroText}
 			</h1>
 			<h2
+				className="text-center"
 				style={{
 					fontFamily: "Space Mono, monospace",
 					color: "var(--colour-text-light)",
