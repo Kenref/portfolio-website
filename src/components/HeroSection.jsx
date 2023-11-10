@@ -45,7 +45,6 @@ export default function HeroSection({ headline1, headline2 }) {
 				onMouseEnter={startAnimation}
 				className="text-center"
 				style={{
-					// fontSize: "5rem",
 					fontSize: "calc(1rem + 8vmin)",
 					fontFamily: "Space Mono, monospace",
 					color: "var(--colour-text-alert)",

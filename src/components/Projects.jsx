@@ -10,7 +10,6 @@ const Projects = forwardRef(({ projects }, ref) => {
 			>
 				Projects
 			</h3>
-			{/* TODO add links to project demo and code */}
 			<div className="row col-lg-8">
 				{projects.map((project, index) => (
 					<div
