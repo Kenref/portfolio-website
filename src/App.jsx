@@ -9,7 +9,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 export default function App() {
-	const resume = "public/Kenneth Tse Resume.pdf";
+	const resume = "/Kenneth Tse Resume.pdf";
 	const contact = "#email";
 	const headline1 = "Kenneth Tse";
 	const headline2 = "Software Developer";
